@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery.tagdragon.js"></script>
+	<script src="emailInput.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Email Lookup Widget</h2>
+
+<form onsubmit="return false;">
+  <span id="email-error" class="hide">Please Enter Valid Email</span>
+  <div id="tagbox" class="tagbox form-control">
+   <input type="email" name="email" value="" placeholder="Recipients" id="tags">
+  </div>
+  <input type="text" name="subject" value="" placeholder="Subject" class="form-control" id="subject">
+  <br>
+  <textarea rows="10" cols="20" class="form-control" placeholder="Message" id="message"></textarea>
+  <input type="submit" value="Send" class="btn btn-info" id="sendBtn">
+</form> 
+</body>
+</html>

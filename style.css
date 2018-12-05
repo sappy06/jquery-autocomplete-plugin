@@ -1,0 +1,87 @@
+body {
+     margin: 46px;
+}
+ #sendBtn {
+     width: 8%;
+}
+ #message, #subject {
+     width:500px;
+}
+ #tagbox {
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+     padding: 5px;
+     width: 500px;
+     height: auto;
+}
+ #tagbox > input{
+     border:0;
+     margin-left: 2px;
+     height: auto;
+     width: 450px;
+}
+ #tagbox > span {
+     float: left;
+     padding-right: 25px;
+     padding-left: 5px;
+}
+ #tagbox > span:hover {
+     opacity:0.7;
+}
+ #tagbox > span:focus {
+     border: darkslateblue;
+}
+ #tagbox > span:after {
+     position: absolute;
+     cursor:pointer;
+     content: "X";
+     padding: 3px 5px;
+     margin: -3px 0px 0px 3px;
+     font-size: 16px;
+     font-weight: bolder;
+}
+ .email-select {
+     border-radius: 109px;
+     border: 1px solid #babfb8;
+     margin-right: 5px;
+}
+ #tagbox ol {
+     position:absolute;
+     background:#e5e5ec;
+     list-style:none;
+     list-style-position: inside;
+     margin:0;
+     padding:0;
+}
+ #tagbox ol li {
+     width:500px;
+     border-left:1px solid #333;
+     border-right:1px solid #333;
+}
+ #tagbox ol li em {
+     color:#ff9133;
+     font-weight: bold;
+     font-style: normal;
+}
+ #tagbox ol li a {
+     text-decoration:none;
+     color:#000;
+     display:block;
+     padding:5px;
+     border-bottom:1px solid #333;
+}
+ #tagbox ol li a:hover, .hl {
+     background:#c3b4b4;
+}
+ #tagbox-lkup {
+     width:100%;
+}
+ input:focus {
+     outline: none ;
+}
+ .focusTag {
+     border: solid 2px cornflowerblue;
+}
+ .email-error {
+     color: red;
+}
