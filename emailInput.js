@@ -5,13 +5,31 @@ $( document ).ready(function() {
       $(this).remove();
   });
 
+  var backKeyPressed = 0;
+
   $("#tagbox input").on({
       keyup: function(ev) {
         if (/(13|32)/.test(ev.which) && this.value) {
           validateEmail(this.value, $("#tagbox input")) ;
         }
+        if (/(8)/.test(ev.which)) {
+            if (!this.value) {
+                if ($('#tagbox span').last().hasClass("focusTag")) {
+                  backKeyPressed++;
+                  if (backKeyPressed % 2 === 0) {
+                      $('#tagbox span').last().remove();
+                      $('#tagbox span').last().addClass("focusTag");
+                      backKeyPressed = 1;
+                  }
+                }
+                else {
+                    $('#tagbox span').last().addClass("focusTag");
+                }
+            }
+        }
       }
-    })
+  });
+  
   $("#tagbox").tagdragon_configure({
     onSelectedItem: function(val) { 
       $("<span/>", { text: val.firstName + " " + val.lastName + " ("+ val.email +")", insertBefore: $("#tagbox input"), class: 'email-select', tabindex: '1' });
@@ -37,6 +55,5 @@ function validateEmail(inputValue, that) {
           $("#email-error").removeClass("hide");
         }
     });
-    
 }
 

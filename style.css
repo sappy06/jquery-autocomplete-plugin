@@ -80,7 +80,7 @@ body {
      outline: none ;
 }
  .focusTag {
-     border: solid 2px cornflowerblue;
+     border: solid 1px #e4d7be;
 }
  .email-error {
      color: red;
